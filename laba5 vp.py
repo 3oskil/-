@@ -13,7 +13,7 @@ def corr_func(v, text=None, graphic=True):
             s += (v[j + t] - np.mean(v)) * (v[j] - np.mean(v))
         r.append(s / (len(v) - t))
     r = np.array(r) / r[0]
-    if graphic is True:
+    if graphic:
         plt.plot(r, lw=1)
         plt.title(text)
         plt.show()
